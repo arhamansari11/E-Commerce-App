@@ -25,4 +25,4 @@ This is a full-stack ecommerce application built using the MERN (MongoDB, Expres
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/arhamansari11/E-Commerce.git
+   git clone https://github.com/arhamansari11/E-Commerce-App.git
