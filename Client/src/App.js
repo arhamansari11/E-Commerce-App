@@ -1,12 +1,9 @@
 import './App.css';
-// import Controll from "./components/controll.jsx"
-import Design from './components/design';
 
 function App() {
   return (
     <div>
-      {/* <Controll /> */}
-      <Design />
+      <h1>This is my E-commerce App</h1>
     </div>
   );
 }

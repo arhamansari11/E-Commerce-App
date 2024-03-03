@@ -1,6 +1,5 @@
-.App {
-  text-align: center;
-}
-h1{
-  color: firebrick;
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
