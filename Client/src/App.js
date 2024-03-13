@@ -1,14 +1,13 @@
 import "./App.css";
-import Image from "./Assets/Images/logo.png";
+import Navbar from "./Components/Navbar.jsx";
+import Routing from "./Routing/Routing.jsx";
+
 function App() {
   return (
-    <div>
-      <h1>This is my E-commerce App</h1>
-      {/* <img classname="w-20" src={Image} /> */}
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
+    <>
+    <Navbar/>
+      <Routing />
+    </>
   );
 }
 
