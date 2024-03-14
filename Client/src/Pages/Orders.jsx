@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../Components/Navbar";
 
 function Orders() {
   return (
-    <div>Orders</div>
-  )
+    <>
+      <Navbar />
+      Orders
+    </>
+  );
 }
 
-export default Orders
+export default Orders;
