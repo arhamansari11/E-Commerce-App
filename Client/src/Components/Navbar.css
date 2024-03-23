@@ -4,5 +4,25 @@
     box-sizing: border-box;
 }
 .Logo{
-    width: 80px;
+    width: 45px;
 }
+/* Navbar.css */
+
+/* Style for dropdown menu items */
+/* Navbar.css */
+
+/* Style for dropdown menu items */
+.dropdown-link {
+    display: block; /* Ensure each link takes the full width of the dropdown */
+    padding: 2px 16x; /* Adjust padding as needed */
+    color: black; /* Set the text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 1s ease; /* Smooth transition effect with slower duration */
+  }
+  
+  /* Style for dropdown menu items on hover */
+  .dropdown-link:hover {
+    color: #5BA5FF; /* Set background color on hover */
+  }
+  
+  

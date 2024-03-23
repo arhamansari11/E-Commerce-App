@@ -2,19 +2,44 @@ import React from "react";
 import "../Components/Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Images/Logo.png";
+import { UserOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { Button, Dropdown, Space } from "antd";
+
+const items = [
+  {
+    label: "My Profile",
+    key: "1",
+    icon: <UserOutlined />,
+    link: "/profile"
+  },
+  {
+    label: "My Orders",
+    key: "2",
+    icon: <ShoppingCartOutlined />,
+    link: "/orders"
+  },
+];
 
 function Navbar() {
+  const menu = (
+    <Space direction="vertical">
+      {items.map(item => (
+      <Link key={item.key} to={item.link} className="dropdown-link">
+      {item.icon} {item.label}
+    </Link>
+      ))}
+    </Space>
+  );
+
   return (
-    // <div className="container-fluid">
-    // <div className="row">
     <div className="col-12">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <Link to="/" style={{ textDecoration: "none", color: "Black" }}>
-            <img src={Logo} className="Logo" />
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            <img src={Logo} className="Logo" alt="Logo" />
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -22,53 +47,59 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  <Link
-                    to="/"
-                    style={{ textDecoration: "none", color: "Black" }}
-                  >
-                    Home
-                  </Link>
-                </a>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  to="/"
+                  className="nav-link active"
+                  aria-current="page"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Home
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <Link
-                    to="/orders"
-                    style={{ textDecoration: "none", color: "Black" }}
-                  >
-                    Orders
-                  </Link>
-                </a>
+              <li className="nav-item">
+                <Link
+                  to="/orders"
+                  className="nav-link"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Orders
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <Link
-                    to="/cart "
-                    style={{ textDecoration: "none", color: "Black" }}
-                  >
-                    Cart
-                  </Link>
-                </a>
+              <li className="nav-item">
+                <Link
+                  to="/cart"
+                  className="nav-link"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Cart
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-disabled="true">
-                  <Link
-                    to="/profile"
-                    style={{ textDecoration: "none", color: "Black" }}
-                  >
-                    Profile
-                  </Link>
-                </a>
+              <li className="nav-item">
+                <Link
+                  to="/profile"
+                  className="nav-link"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Profile
+                </Link>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <button class="btn btn-success me-3" type="submit">
+            <form className="d-flex" role="search">
+              <Space wrap>
+                <Dropdown.Button
+                  overlay={menu}
+                  placement="bottomRight"
+                  icon={<UserOutlined />}
+                >
+                  My Info
+                </Dropdown.Button>
+              </Space>
+              <button className="btn btn-secondary mx-3" type="submit">
                 <Link
                   to="/login"
                   style={{ textDecoration: "none", color: "white" }}
@@ -76,7 +107,7 @@ function Navbar() {
                   Login
                 </Link>
               </button>
-              <button class="btn btn-success" type="submit">
+              <button className="btn btn-secondary" type="submit">
                 <Link
                   to="/register"
                   style={{ textDecoration: "none", color: "white" }}
@@ -89,8 +120,6 @@ function Navbar() {
         </div>
       </nav>
     </div>
-    // </div>
-    // </div>
   );
 }
 
