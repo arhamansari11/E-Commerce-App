@@ -10,23 +10,23 @@ const items = [
     label: "My Profile",
     key: "1",
     icon: <UserOutlined />,
-    link: "/profile"
+    link: "/profile",
   },
   {
     label: "My Orders",
     key: "2",
     icon: <ShoppingCartOutlined />,
-    link: "/orders"
+    link: "/orders",
   },
 ];
 
 function Navbar() {
   const menu = (
     <Space direction="vertical">
-      {items.map(item => (
-      <Link key={item.key} to={item.link} className="dropdown-link">
-      {item.icon} {item.label}
-    </Link>
+      {items.map((item) => (
+        <Link key={item.key} to={item.link} className="dropdown-link">
+          {item.icon} {item.label}
+        </Link>
       ))}
     </Space>
   );
@@ -58,38 +58,19 @@ function Navbar() {
                   aria-current="page"
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/orders"
-                  className="nav-link"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Orders
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/cart"
-                  className="nav-link"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Cart
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/profile"
-                  className="nav-link"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Profile
+                  Products
                 </Link>
               </li>
             </ul>
             <form className="d-flex" role="search">
+              <Link
+                to="/cart"
+                className="nav-link mt-2 me-3"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <ShoppingCartOutlined style={{fontSize : "25px"}}/>
+              </Link>
+
               <Space wrap>
                 <Dropdown.Button
                   overlay={menu}
