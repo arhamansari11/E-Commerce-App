@@ -33,7 +33,10 @@ function Navbar() {
 
   return (
     <div className="col-12">
-      <nav className="navbar navbar-expand-lg " style={{backgroundColor :"#1F2937"}}>
+      <nav
+        className="navbar navbar-expand-sm "
+        style={{ backgroundColor: "#1F2937" }}
+      >
         <div className="container-fluid">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <img src={Logo} className="Logo" alt="Logo" />
@@ -46,19 +49,21 @@ function Navbar() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style={{ backgroundColor: "white" }} // Apply inline style
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-              <Link
-                to="/cart"
-                className="nav-link me-2"
-                style={{ textDecoration: "none", color: " white" }}
-              >
-                <ShoppingCartOutlined style={{fontSize : "25px" }}/>
-              </Link>
+                <Link
+                  to="/cart"
+                  className="nav-link me-2"
+                  style={{ textDecoration: "none", color: " white" }}
+                >
+                  <ShoppingCartOutlined style={{ fontSize: "25px" }} />
+                </Link>
               </li>
             </ul>
             <form className="d-flex me-3" role="search">
