@@ -22,7 +22,7 @@ This is a full-stack ecommerce application built using the MERN (MongoDB, Expres
 
 ## Installation
 
-1. Clone the repository:
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/arhamansari11/E-Commerce-App.git
