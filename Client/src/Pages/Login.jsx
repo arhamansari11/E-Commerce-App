@@ -7,8 +7,8 @@ function Login() {
     <div className="container-fluid d-flex justify-content-center align-items-center vh-100">
       <div className="col-lg-4 col-md-6 col-sm-8">
         <form>
-        <div className="mb-2 text-center">
-        <img src={Logo} className="Logo" alt="Logo" />
+          <div className="mb-2 text-center">
+            <img src={Logo} className="Logo" alt="Logo" />
           </div>
           <div className="mb-4 text-center">
             <h4 style={{ fontWeight: "bold" }}>Login to your Account</h4>
@@ -16,19 +16,32 @@ function Login() {
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input type="email" className="form-control" />
-            <div id="emailHelp" className="form-text">
-              We'll never share your email with anyone else.
-            </div>
           </div>
-          <div className="mb-3">
+          <div className="mb-3 d-flex justify-content-between">
             <label className="form-label">Password</label>
-            <input type="password" className="form-control" />
+            <label className="form-label">
+              <Link
+                to="/forgotpassword"
+                style={{
+                  textDecoration: "none",
+                  color: "#6366F1",
+                  fontWeight: "bold",
+                }}
+              >
+                Forgot Password?
+              </Link>
+            </label>
           </div>
-          <button type="submit" className="btn btn-primary mb-3">
+          <input type="password" className="form-control" />
+
+          <button
+            type="submit"
+            className="btn btn-primary my-3 mx-auto d-block"
+          >
             Log in
           </button>
-          <div>
-            <label className="form-label">
+          <div className="text-center">
+            <label className="form-label ">
               Not a member ?{" "}
               <Link
                 to="/register"

@@ -33,7 +33,7 @@ function Navbar() {
 
   return (
     <div className="col-12">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg " style={{backgroundColor :"#1F2937"}}>
         <div className="container-fluid">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <img src={Logo} className="Logo" alt="Logo" />
@@ -55,7 +55,7 @@ function Navbar() {
               <Link
                 to="/cart"
                 className="nav-link me-2"
-                style={{ textDecoration: "none", color: "black" }}
+                style={{ textDecoration: "none", color: " white" }}
               >
                 <ShoppingCartOutlined style={{fontSize : "25px" }}/>
               </Link>

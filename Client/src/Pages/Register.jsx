@@ -28,10 +28,11 @@ function Register() {
             <label className="form-label">Confirm Password</label>
             <input type="password" className="form-control" />
           </div>
-          <button type="submit" className="btn btn-primary mb-3">
-            Sign Up
-          </button>
-          <div>
+          <button type="submit" className="btn btn-primary mb-3 mx-auto d-block">
+  Sign Up
+</button>
+
+          <div className="text-center">
             <label className="form-label">
               Already a member ?{" "}
               <Link
