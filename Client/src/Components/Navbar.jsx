@@ -1,5 +1,5 @@
 import React from "react";
-import "../Components/Navbar.css";
+import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Images/Logo.png";
 import { UserOutlined, ShoppingCartOutlined } from "@ant-design/icons";
