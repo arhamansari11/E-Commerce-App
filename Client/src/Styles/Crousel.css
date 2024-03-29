@@ -1,0 +1,40 @@
+.img-class>img{
+    width: 450px !important;
+}
+.h1-class{
+    font-weight: bold;
+    font-size: 44px;
+}
+
+@media only screen and (min-width:1001px) and (max-width:1200px){ 
+    .img-class>img{
+        width: 400px !important;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:1000px){ 
+    .img-class>img{
+        width: 350px !important;
+    }
+    
+} 
+@media only screen and (min-width:500px) and (max-width:768px){ 
+    .h1-class{
+        font-weight: bold;
+        font-size: 35px;
+    }
+    
+    .img-class>img{
+        width: 300px !important;
+    }
+    
+} 
+@media only screen and (min-width:300px) and (max-width:499px){ 
+    .h1-class{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .img-class>img{
+        width: 250px !important;
+    }
+    
+} 
