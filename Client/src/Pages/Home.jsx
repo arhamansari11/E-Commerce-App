@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import '../Styles/Home.css'
 import Heading from "../Components/Heading";
-// import Footer from "../Components/Footer"
+import Footer from "../Components/Footer"
 import Crousel from "../Components/Crousel";
 
 function Home() {
@@ -11,6 +11,7 @@ function Home() {
       <Navbar />
       <Heading/>
       <Crousel/>
+      <Footer/>
     </div>
   );
 }
