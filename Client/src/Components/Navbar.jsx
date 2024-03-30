@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../Assets/Images/Logo.png";
 import { UserOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Space } from "antd";
+
 import { useSelector } from "react-redux";
 
 const items = [
@@ -22,7 +23,8 @@ const items = [
 ];
 
 function Navbar() {
-  const selct = useSelector(state => state);
+
+  const selct = useSelector((state) => state);
   const menu = (
     <Space direction="vertical">
       {items.map((item) => (
@@ -65,7 +67,7 @@ function Navbar() {
                   style={{ textDecoration: "none", color: " white" }}
                 >
                   <ShoppingCartOutlined style={{ fontSize: "25px" }} />
-                  <span class="position-absolute top-3 start-100 translate-middle badge rounded-pill bg-danger">
+                  <span class="position-absolute top-4 start-99  translate-middle badge rounded-pill bg-danger">
                     {selct}
                     <span class="visually-hidden">unread messages</span>
                   </span>
