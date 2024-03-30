@@ -57,7 +57,7 @@ const Footer = () => {
         <div className="col-11 mx-auto mt-5">
           <hr />
         </div>
-        <h5 className="text-center">© 2024 Shopsy . ALL RIGHTS RESERVED.</h5>
+        <h6 className="text-center">© 2024 Shopsy . ALL RIGHTS RESERVED.</h6>
       </div>
     </>
   );
