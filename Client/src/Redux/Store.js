@@ -1,8 +1,8 @@
-import { createStore } from "redux";
-const reducer = (state = 0, action)=>{
-    switch (action.type) {
-        case 'addtocart' : return state + 1;
-        default : return state;
+import { configureStore } from "@reduxjs/toolkit"
+import cartreducer from "./slices/CartSlice"
+export const store = configureStore({
+    reducer : {
+        cart  : cartreducer,
     }
-}
-export const store = createStore(reducer);
+});
+

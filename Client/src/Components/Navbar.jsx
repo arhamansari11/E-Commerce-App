@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import Logo from "../Assets/Images/Logo.png";
 import { UserOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Space } from "antd";
-
+import { itemselctor } from "../Redux/slices/CartSlice"
 import { useSelector } from "react-redux";
 
-const items = [
+const menuItems = [  // Renamed from 'items' to 'menuItems'
   {
     label: "My Profile",
     key: "1",
@@ -24,10 +24,11 @@ const items = [
 
 function Navbar() {
 
-  const selct = useSelector((state) => state);
+  const items = useSelector(itemselctor); 
+  const total = items.reduce((a , b) => a + b.price , 0);
   const menu = (
     <Space direction="vertical">
-      {items.map((item) => (
+      {menuItems.map((item) => ( // Use 'menuItems' here instead of 'items'
         <Link key={item.key} to={item.link} className="dropdown-link">
           {item.icon} {item.label}
         </Link>
@@ -67,9 +68,9 @@ function Navbar() {
                   style={{ textDecoration: "none", color: " white" }}
                 >
                   <ShoppingCartOutlined style={{ fontSize: "25px" }} />
-                  <span class="position-absolute top-4 start-99  translate-middle badge rounded-pill bg-danger">
-                    {selct}
-                    <span class="visually-hidden">unread messages</span>
+                  <span className="position-absolute top-4 start-99  translate-middle badge rounded-pill bg-danger">
+                    {items.length}
+                    <span className="visually-hidden">unread messages</span>
                   </span>
                 </Link>
               </li>
