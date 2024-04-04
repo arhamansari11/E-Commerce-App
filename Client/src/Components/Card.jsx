@@ -11,29 +11,35 @@ const Card = (props) => {
       name: props.productName,
       price: props.price,
       image: props.image,
-      quantity: 1 
+      quantity: 1,
     };
     dispatch(addItem(selectedItem));
     message.success("Product added to cart");
   };
 
   return (
-    <div className="col-3 mb-4">
-      <div className="card" style={{ width: "18rem" }}>
-        <img
-          src={props.image}
-          className="card-img-top"
-          alt={props.productName}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{props.productName}</h5>
-          <p className="card-text">Rs {props.price}/-</p>
-          <button className="btn btn-primary" onClick={handleSubmit}>
-            Add to Cart
-          </button>
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="card" style={{ width: "18rem;", margin: "10px" }}>
+              <img
+                className="card-img-top"
+                src={props.image}
+                alt={props.productName}
+              />
+              <div className="card-body">
+                <h5 class="card-title">{props.productName}</h5>
+                <p class="card-text">Rs. {props.price}/-</p>
+                <button onClick={handleSubmit} className="btn btn-primary">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
