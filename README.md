@@ -6,7 +6,7 @@ This is a Full-stack ecommerce application built using the MERN (MongoDB, Expres
 
 - **User Authentication**: Users can sign up, log in, and log out securely.
 - **Product Management**: Admin can add, edit, and delete products.
-- **Shopping Cart**: Users can add products to their cart and manage their cart items.
+- **Shopping Cart**: Users can add products to their cart and manage their cart items easily.
 - **Checkout Process**: Secure checkout process for users to complete their purchases.
 - **Order History**: Users can view their order history and track the status of their orders.
 - **Search Functionality**: Users can search for products based on keywords.

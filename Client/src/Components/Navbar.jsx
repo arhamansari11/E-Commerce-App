@@ -68,7 +68,7 @@ function Navbar() {
                   style={{ textDecoration: "none", color: " white" }}
                 >
                   <ShoppingCartOutlined style={{ fontSize: "25px" }} />
-                  <span className="position-absolute top-4 start-99  translate-middle badge rounded-pill bg-danger">
+                  <span className="position-absolute top-4 start-99  translate-middle badge rounded-pill bg-primary">
                     {items.length}
                     <span className="visually-hidden">unread messages</span>
                   </span>
