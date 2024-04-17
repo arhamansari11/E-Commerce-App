@@ -1,4 +1,10 @@
 [
+  {
+    "id": 1,
+      "productName": "Ed H",
+      "image": "https://avatars.githubusercontent.com/u/125207444?v=4",
+      "price": 100 
+  },
     
     {
       "id": 2,

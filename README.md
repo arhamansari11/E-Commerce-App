@@ -1,6 +1,6 @@
 # Ecommerce App using MERN Stack
 
-This is a Full-stack ecommerce application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides a platform for users to browse, search, and purchase products conveniently.
+This is a Full-Stack ecommerce application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides a platform for users to browse, search, and purchase products conveniently.
 
 ## Features
 
@@ -14,7 +14,7 @@ This is a Full-stack ecommerce application built using the MERN (MongoDB, Expres
 
 ## Tech Stack
 
-- **Frontend**: React.js, Redux (for state management), React Router (for routing), Bootstrap , Ant Design , Material UI (for styling)
+- **Frontend**: React.js, Redux (for state management), React Router (for routing), Bootstrap , Ant Design , Material UI (for styling).
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (with Mongoose ORM)
 - **Authentication**: JSON Web Tokens (JWT)
