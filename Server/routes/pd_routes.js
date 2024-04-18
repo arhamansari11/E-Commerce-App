@@ -17,7 +17,7 @@ Router.post('/addpd', async (req, res) => {
         res.json(result);
         console.log(result);
     } catch (error) {
-        res.status(500).json(error.message || "Internal Server Error");
+        res.status(500).json(error.message || "Server Error");
     }
 });
 
